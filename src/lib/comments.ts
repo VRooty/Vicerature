@@ -11,5 +11,5 @@ export async function saveComment(userName: string, content: string, slug: strin
 }
 
 export async function getComments(slug:string) {
-    return await sql`SELECT * FROM comments WHEREslug = ${slug}`
+    return await sql`SELECT * FROM comments WHERE slug=${slug}`
 }

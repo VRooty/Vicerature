@@ -19,4 +19,8 @@ export async function POST(request: NextRequest, {params} : {params: {slug: stri
     const formData = await request.formData()
     const username = formData.get('username') as string;
     const comment = formData.get('comment') as string;
+
+    await saveComment(username, comment, params.slug)
+
+    NextResponse.json({message: 'comment saved'})
 }
