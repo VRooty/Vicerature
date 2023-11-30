@@ -1,4 +1,3 @@
-"use client";
 import { useRouter } from "next/navigation";
 import { useTransition } from "react";
 import { WEB_SITE } from "config";
