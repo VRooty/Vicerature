@@ -9,7 +9,7 @@ export async function GET(request: NextRequest, {params} : {params: {slug: strin
         const comments = await getComments(slug)
         return NextResponse.json({comments})
     } catch (error) {
-        return NextResponse.json({error})
+        return NextResponse.json({message: "that didn't work!"})
     }
 }
 
