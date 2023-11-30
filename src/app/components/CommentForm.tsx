@@ -20,6 +20,7 @@ export function CommentForm({ postSlug }: {postSlug: string}) {
       const username = formData.get('username') as string
       const comment = formData.get('comment') as string
       await saveComment(username, comment, postSlug)
+      revalidatePath(`/blog/${postSlug}`)
   
       
     }
